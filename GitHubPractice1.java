@@ -15,7 +15,13 @@ public class GitHubPractice1{
 		System.out.println(list1);
 		System.out.println(list2);
 
+		System.out.println();
+
 		System.out.println(combine(list1, list2));
+
+		System.out.println();
+
+		System.out.println(toString(list1));
 
 
 	}
@@ -27,6 +33,17 @@ public class GitHubPractice1{
 			list.add(list2.get(i));
 		}
 		return list;
+	}
+
+	public static String toString(ArrayList<Integer> list){
+		String s = "";
+		for(int i = 0; i < list.size(); i++){
+			if(i == list.size()-1)
+				s += list.get(i);
+			else
+				s += list.get(i) + ", ";
+		}
+		return s;
 	}
 
 }
