@@ -23,6 +23,22 @@ public class GitHubPractice1{
 
 		System.out.println(toString(list1));
 
+		System.out.println();
+
+		ArrayList<Integer> list = new ArrayList<>();
+		for(int i = 0; i < 10; i++){
+			if(i%2 == 0){
+				list.add(i);
+				list.add(i);
+			}
+			else
+				list.add(i);
+		}
+
+		System.out.println(list);
+
+		System.out.println(removeDuplicates(list));
+
 
 	}
 
@@ -44,6 +60,21 @@ public class GitHubPractice1{
 				s += list.get(i) + ", ";
 		}
 		return s;
+	}
+
+	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
+		ArrayList<Integer> list1 = new ArrayList<>();
+		for(int i = 0; i < list.size(); i++){
+			boolean match = false;
+			for(int j = i+1; j < list.size(); j++){
+				if(list.get(i) == list.get(j))
+					match = true;
+			}
+			if(match == false)
+				list1.add(list.get(i));
+		}
+
+		return list1;
 	}
 
 }
